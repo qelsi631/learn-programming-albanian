@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mëso Programimin</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="imgs/coding-removebg-preview.png" alt="Logo" class="logo-icon" />
+      <span class="logo-text">Mëso Programimin</span>
+    </div>
+    <div class="navbar-right">
+      <button class="trial-btn">Trial</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Mëso Programimin</h1>
+        <p>
+          Filloni udhëtimin tuaj në botën e <strong>programimit</strong> përmes mësimeve interaktive,
+          ushtrimeve praktike dhe sfidave në gjuhën shqipe.
+        </p>
+        <a href="#learn" class="hero-btn">🚀 Fillo të mësosh</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="imgs/coding-removebg-preview.png" alt="Coding illustration" />
+      </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn" class="perbajtja">
+      <h2 class="title">Çfarë do të mësosh</h2>
+      <p class="desc">
+        Në këtë platformë do të mësosh <strong>bazat e programimit</strong> përmes mësimeve të qarta,
+        shembujve praktikë dhe sfidave interaktive — të gjitha në <strong>gjuhën shqipe</strong>.
+        Qëllimi ynë është ta bëjmë programimin të kuptueshëm, argëtues dhe të arritshëm për të gjithë.
+      </p>
+
+      <ul class="list">
+        <li>✅ Kuptosh si funksionon logjika e programimit</li>
+        <li>✅ Shkruash programin tënd të parë me <strong>JavaScript</strong></li>
+        <li>✅ Përdorësh <strong>variabla, kushte, cikle dhe funksione</strong></li>
+        <li>✅ Ndërtosh <strong>projekte të vogla interaktive</strong></li>
+        <li>✅ Mendosh si një <strong>programues i vërtetë</strong> duke zgjidhur probleme hap pas hapi</li>
+      </ul>
+
+     <div class="structure">
+  <h3 class="structure-title">Si është ndarë kursi</h3>
+  <p class="structure-desc">Kursi ndahet në 3 pjesë kryesore që të ndihmojnë të kuptosh, praktikosh dhe sfidosh veten:</p>
+
+  <div class="structure-cards">
+    <div class="structure-card">
+      <div class="icon-wrapper">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h4>Teori</h4>
+      <p>Shpjegime të qarta për çdo koncept të ri, me shembuj të thjeshtë dhe ilustrime praktike.</p>
+    </div>
+
+    <div class="structure-card">
+      <div class="icon-wrapper">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <h4>Praktikë</h4>
+      <p>Ushtrime interaktive ku mund të shkruash dhe testosh kodin tënd në shfletues.</p>
+    </div>
+
+    <div class="structure-card">
+      <div class="icon-wrapper">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h4>Sfidë</h4>
+      <p>Detyra që të ndihmojnë të mendosh si një programues i vërtetë dhe të zgjidhësh probleme reale.</p>
+    </div>
+  </div>
+</div>
+
+
+
+      <p class="end">
+        Nuk ka rëndësi nëse nuk ke programuar kurrë më parë — kjo platformë është pika e duhur për ta nisur udhëtimin tënd drejt botës së programimit.
+      </p>
+
+      <a href="lesson1.html" class="btn">Fillo tani</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Mëso Programimin</h3>
+        <p>
+          Një platformë në gjuhën shqipe për të mësuar bazat e programimit
+          përmes mësimeve interaktive, ushtrimeve praktike dhe sfidave të vërteta.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Linke të shpejta</h4>
+        <ul>
+          <li><a href="#">Kreu</a></li>
+          <li><a href="#">Rreth nesh</a></li>
+          <li><a href="#">Kursi</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Na ndiq</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Mëso Programimin. Krijuar nga <span>Qelsim Rraci</span> 💻</p>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll (optional enhancement) -->
+  <script>
+    document.querySelector('.hero-btn').addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('#learn').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

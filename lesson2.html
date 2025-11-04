@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mësimi 2: Tipet e të Dhënave | Mëso Programimin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lesson.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <!-- Prism.js for syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="imgs/coding-removebg-preview.png" alt="Logo" class="logo-icon">
+      <span class="logo-text">Mëso Programimin</span>
+    </div>
+    <div class="navbar-right">
+      <button class="trial-btn">Trial</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- Lesson content -->
+  <main class="lesson-container">
+    <h1 class="lesson-title">Mësimi 2: Tipet e të Dhënave</h1>
+    <p class="lesson-updated">Përditësuar: Nëntor 2025</p>
+
+    <section class="lesson-section">
+      <h2>Çfarë janë tipet e të dhënave?</h2>
+      <p>
+        Çdo vlerë në JavaScript ka një <strong>tip të dhëne</strong>.
+        Tipet përcaktojnë se çfarë lloj informacioni po ruan një variabël dhe
+        si mund të përdoret ai në program.
+      </p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Kategoritë kryesore</h2>
+      <ul>
+        <li><strong>Primitive</strong> – String, Number, Boolean, Null, Undefined</li>
+        <li><strong>Jo-primitive</strong> – Object, Array, Function</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Shembuj</h2>
+      <pre><code class="language-javascript">
+// String – Paraqet vetem Tekst pra nuk mund te jete numer apo ndonje tip tjeter
+let emri = "Qelsim";
+
+// Number – Paraqet vetem Numra
+let mosha = 20;
+
+// Boolean – Paraqet e vërtetë ose e rreme
+let eshteStudent = true;
+
+// Null & Undefined
+let nota = null;
+let telefoni; // undefined
+
+// Object & Array
+let person = { emri: "Qelsim", mosha: 20 };
+let ngjyra = ["kuqe", "gjelbër", "blu"];
+</code></pre>
+
+    </section>
+
+    <section class="lesson-section">
+      <h2>Përdorimi i <code>typeof</code></h2>
+      <p>
+        Komanda <code>typeof</code> tregon tipin e një vlere.
+      </p>
+      <pre class="code-block"><code>
+console.log(typeof emri);      // "string"
+console.log(typeof mosha);     // "number"
+console.log(typeof eshteStudent); // "boolean"
+      </code></pre>
+    </section>
+
+    <div class="lesson-nav">
+      <a href="lesson1.html" class="nav-btn back-btn">← Kthehu te Mësimi 1</a>
+      <a href="challenge2.html" class="nav-btn next-btn">Vazhdo te Sfida 2 →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2025 Mëso Programimin | Krijuar nga <span>Qelsim Rraci</span></p>
+    </div>
+  </footer>
+</body>
+</html>
