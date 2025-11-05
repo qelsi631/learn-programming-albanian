@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mësimi 3: Operatorët në JavaScript | Mëso Programimin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="imgs/coding-removebg-preview.png" alt="Logo" class="logo-icon">
+      <span class="logo-text">Mëso Programimin</span>
+    </div>
+    <div class="navbar-right">
+      <button class="trial-btn">Trial</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- Lesson Container -->
+  <main class="lesson-container">
+    <h1 class="lesson-title">Mësimi 3: Operatorët në JavaScript</h1>
+    <p class="lesson-updated">Përditësuar: Nëntor 2025</p>
+
+    <!-- Section 1 -->
+    <section class="lesson-section">
+      <h2>Çfarë janë operatorët?</h2>
+      <p>
+        Operatorët janë simbole që përdoren për të <strong>kryer veprime</strong> mbi vlera dhe variabla.
+        Për shembull, ne mund të mbledhim dy numra, të krahasojmë vlera, apo të kontrollojmë kushte logjike.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="lesson-section">
+      <h2>1️⃣ Operatorët aritmetikë</h2>
+      <p>Përdoren për të bërë llogaritje matematikore.</p>
+
+      <pre class="code-block">
+<code class="language-javascript">let a = 10;
+let b = 3;
+
+console.log(a + b);  // Mbledhje → 13
+console.log(a - b);  // Zbritje → 7
+console.log(a * b);  // Shumëzim → 30
+console.log(a / b);  // Pjesëtim → 3.333...
+console.log(a % b);  // Mbetja → 1
+console.log(a ** b); // Fuqizimi → 1000</code>
+      </pre>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="lesson-section">
+      <h2>2️⃣ Operatorët e krahasimit</h2>
+      <p>
+        Përdoren për të krahasuar dy vlera. Rezultati është gjithmonë një
+        <strong>boolean</strong> — <code>true</code> ose <code>false</code>.
+      </p>
+
+      <pre class="code-block">
+<code class="language-javascript">console.log(5 > 3);   // true
+console.log(10 < 5);  // false
+console.log(10 == "10");  // true (kontrollon vetëm vlerën)
+console.log(10 === "10"); // false (kontrollon vlerën dhe tipin)
+console.log(8 != 6);  // true
+</code>
+      </pre>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="lesson-section">
+      <h2>3️⃣ Operatorët logjikë</h2>
+      <p>
+        Këta operatorë përdoren për të bashkuar kushte dhe janë shumë të rëndësishëm
+        kur punojmë me <code>if</code> statements.
+      </p>
+
+      <ul>
+        <li><code>&&</code> (AND) – Kthen <strong>true</strong> nëse të dy kushtet janë të vërteta.</li>
+        <li><code>||</code> (OR) – Kthen <strong>true</strong> nëse të paktën një kusht është i vërtetë.</li>
+        <li><code>!</code> (NOT) – Kthen të kundërtën e rezultatit.</li>
+      </ul>
+
+      <pre class="code-block">
+<code class="language-javascript">let eshteStudent = true;
+let kaKaluar = false;
+
+console.log(eshteStudent && kaKaluar); // false
+console.log(eshteStudent || kaKaluar); // true
+console.log(!kaKaluar); // true
+</code>
+      </pre>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="lesson-section">
+      <h2>4️⃣ Operatorët e kombinimit (Assignment Operators)</h2>
+      <p>
+        Këta operatorë na ndihmojnë të shkruajmë më shkurt kodin, duke kombinuar
+        veprimin dhe ruajtjen e rezultatit në një hap.
+      </p>
+
+      <pre class="code-block">
+<code class="language-javascript">let x = 5;
+x += 3; // e njëjtë me x = x + 3
+x *= 2; // e njëjtë me x = x * 2
+console.log(x); // 16
+</code>
+      </pre>
+    </section>
+
+    <!-- Navigation -->
+    <div class="lesson-nav">
+      <a href="challenge2-1.html" class="nav-btn back-btn">← Kthehu te Sfida 2.1</a>
+      <a href="challenge3.html" class="nav-btn next-btn">Vazhdo te Sfida 3 →</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2025 Mëso Programimin | Krijuar nga <span>Qelsim Rraci</span></p>
+    </div>
+  </footer>
+</body>
+</html>
