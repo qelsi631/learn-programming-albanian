@@ -11,13 +11,12 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
-
   <!-- Prism.js for syntax highlighting -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </head>
+
 <body>
   <!-- Header -->
   <header class="navbar">
@@ -39,9 +38,11 @@
     <section class="lesson-section">
       <h2>Çfarë janë tipet e të dhënave?</h2>
       <p>
-        Çdo vlerë në JavaScript ka një <strong>tip të dhëne</strong>.
-        Tipet përcaktojnë se çfarë lloj informacioni po ruan një variabël dhe
-        si mund të përdoret ai në program.
+        Çdo vlerë në JavaScript ka një <strong>tip të dhëne</strong>.  
+        Tipet përcaktojnë se çfarë lloj informacioni po ruan një variabël dhe si mund të përdoret ai në program.
+      </p>
+      <p>
+        Për shembull, një numër përdoret për llogaritje, një tekst për emra apo përshkrime, ndërsa një vlerë logjike (true/false) për vendime në kod.
       </p>
     </section>
 
@@ -51,41 +52,86 @@
         <li><strong>Primitive</strong> – String, Number, Boolean, Null, Undefined</li>
         <li><strong>Jo-primitive</strong> – Object, Array, Function</li>
       </ul>
+      <p>
+        <strong>Primitive</strong> janë bazike dhe ruajnë vetëm një vlerë, ndërsa <strong>jo-primitive</strong> mund të ruajnë shumë vlera në të njëjtën variabël (si listat apo objektet).
+      </p>
     </section>
 
     <section class="lesson-section">
-      <h2>Shembuj</h2>
+      <h2>Shembuj me tipe të ndryshme</h2>
       <pre><code class="language-javascript">
-// String – Paraqet vetem Tekst pra nuk mund te jete numer apo ndonje tip tjeter
-let emri = "Alban";
+// String – përdoret për tekst
+let emri = "Alban"; // vendoset gjithmonë në thonjëza
 
-// Number – Paraqet vetem Numra
+// Number – përdoret për numra (të plotë ose me presje)
 let mosha = 20;
+let temperatura = 36.5;
 
-// Boolean – Paraqet e vërtetë ose e rreme
+// Boolean – vlerë logjike: e vërtetë ose e rreme
 let eshteStudent = true;
+let kaMakine = false;
 
-// Null & Undefined
-let nota = null;
-let telefoni; // undefined
+// Null – tregon që diçka është bosh me qëllim
+let nota = null; // e vendosim vetë kur s'ka vlerë
 
-// Object & Array
+// Undefined – ndodh kur një variabël ekziston, por nuk i është dhënë ende vlerë
+let telefoni;
+      </code></pre>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Le ta kuptojmë më mirë <code>null</code> dhe <code>undefined</code></h2>
+      <p>
+        Këto dy tipe shpesh ngatërrohen nga fillestarët, por kanë kuptime të ndryshme:
+      </p>
+      <ul>
+        <li>
+          <strong>undefined</strong> ndodh <em>automatikisht</em> kur një variabël është deklaruar, por s’ka marrë vlerë ende.
+          <br><em>Shembull:</em> <code>let x;</code> → <code>x</code> është <code>undefined</code>.
+        </li>
+        <li>
+          <strong>null</strong> është një vlerë që programuesi e vendos vetë për të treguar që diçka është bosh, por ekziston.
+          <br><em>Shembull:</em> <code>let nota = null;</code> → do të vendosim vlerën më vonë.
+        </li>
+      </ul>
+      <p>
+        Pra, <code>undefined</code> do të thotë "asgjë nuk është caktuar ende", ndërsa <code>null</code> do të thotë "e di që nuk ka vlerë tani".
+      </p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Objektet dhe Arrays</h2>
+      <p>
+        Objektet dhe Arrays janë tipe të dhënash më të avancuara.  
+        Ato përdoren për të ruajtur disa vlera në një variabël të vetme.
+        <br>Per keto te fundit me vone do te mesojme me gjeresisht.
+      </p>
+      <pre><code class="language-javascript">
+// Object – grup vlerash me emra (çelësa)
 let person = { emri: "Qelsim", mosha: 20 };
-let ngjyra = ["kuqe", "gjelbër", "blu"];
-</code></pre>
 
+// Array – listë me disa elemente
+let ngjyra = ["kuqe", "gjelbër", "blu"];
+      </code></pre>
     </section>
 
     <section class="lesson-section">
       <h2>Përdorimi i <code>typeof</code></h2>
       <p>
-        Komanda <code>typeof</code> tregon tipin e një vlere.
+        Komanda <code>typeof</code> përdoret për të parë tipin e një vlere në JavaScript.  
+        Ajo kthen një fjalë që përfaqëson tipin e vlerës, si “string”, “number”, “boolean”, etj.
       </p>
       <pre class="code-block"><code class="language-javascript">
-console.log(typeof emri);      // "string"
-console.log(typeof mosha);     // "number"
-console.log(typeof eshteStudent); // "boolean"
+console.log(typeof emri);          // "string"
+console.log(typeof mosha);         // "number"
+console.log(typeof eshteStudent);  // "boolean"
+console.log(typeof nota);          // "object" (JavaScript e konsideron null si "object")
+console.log(typeof telefoni);      // "undefined"
       </code></pre>
+      <p>
+        Siç mund ta shohësh, <strong>typeof null</strong> kthen “object”.  
+        Kjo është një <em>gabim historik</em> në JavaScript, por është ruajtur për pajtueshmëri.
+      </p>
     </section>
 
     <div class="lesson-nav">
